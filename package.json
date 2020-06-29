@@ -1,0 +1,53 @@
+{
+  "name": "react_todo-app",
+  "homepage": "http://ronyshchenko.github.io/listOfTodos",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [],
+  "author": "Mate Academy",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^9.5.0",
+    "stylelint": "^13.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint",
+      "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
